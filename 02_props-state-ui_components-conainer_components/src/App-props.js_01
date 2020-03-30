@@ -1,0 +1,18 @@
+import React, {Component} from 'react';
+import Ninjas from './Ninjas';
+
+
+class App extends Component {
+  render(){
+    return (
+      <div className="App">
+        <h1>My First react App</h1>
+        <p>Welcome</p>
+        <Ninjas name="Katheer" age="29" belt="Black"/>
+        <Ninjas name="Johna" age="30" belt="Blue"/>
+      </div>
+    )
+  }
+}
+
+export default App;

@@ -1,0 +1,33 @@
+import React from 'react';
+
+/**
+ * 
+ * UI || Functional|| Stateless Componets
+ * Has to pass (props)
+ * instead of (props) can pass array value like
+ * -  ({ninjas, age, story})
+ * in container components no need to pass props
+ * no need render method
+ */
+
+const Ninjas = ({ ninjas }) => {
+  ///console.log(this.props);
+  //const { ninjas } = this.props;
+  const ninjasList = ninjas.map( ninja => {
+    return (
+      <div className="App" key= { ninja.id }>
+        <p>Name: { ninja.name } </p>
+        <p>Age: { ninja.age }</p>
+        <p>Belt: { ninja.belt }</p>
+        <hr />
+      </div>
+    )
+  })
+  return (
+    <div className="ninjaList">
+      { ninjasList }
+    </div>
+  ) 
+}
+
+export default Ninjas;
